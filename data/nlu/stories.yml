@@ -1,0 +1,24 @@
+version: '3.1'
+stories:
+  - story: Are you a bot
+    steps:
+      - intent: bot_challenge
+      - action: utter_i_am_a_bot
+      
+  - story: Say hey
+    steps:
+      - intent: greet
+      - action: utter_greet
+  - story: Said thanks
+    steps:
+      - intent: thank
+      - action: utter_thank
+  - story: Good bye
+    steps:
+      - intent: good_bye
+      - action: utter_goodbye
+  - story: Test TTS
+    steps:
+      - intent: TTS
+      - action: action_TTS
+

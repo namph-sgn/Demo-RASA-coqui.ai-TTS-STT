@@ -1,0 +1,23 @@
+version: '3.1'
+intents:
+  - greet
+  - good_bye
+  - thank
+  - bot_challenge
+entities: []
+responses:
+  utter_greet:
+    - text: Hello! I am RASA, can i help you?
+  utter_goodbye:
+    - text: Goodbye, see you later.
+  utter_i_am_a_bot:
+    - text: I am a bot created by RASA and developed by AntBuddy.
+  utter_thank:
+    - text: You are welcome.
+  utter_please_rephrase:
+    - text: I'm sorry, I didn't quite understand that. Could you rephrase?
+config:
+  store_entities_as_slots: true
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

@@ -1,0 +1,33 @@
+language: en
+pipeline:
+  - name: WhitespaceTokenizer
+  # - name: RegexFeaturizer
+  # - name: CRFEntityExtractor
+  #   BILOU_flag: True
+  # - name: LexicalSyntacticFeaturizer
+  #   use_regexes: True
+  - name: CountVectorsFeaturizer
+  - name: CountVectorsFeaturizer
+    analyzer: char_wb
+    min_ngram: 1
+    max_ngram: 4
+  - name: DIETClassifier
+    epochs: 200
+    BILOU_flag: false
+  ####################
+  - name: FallbackClassifier
+    threshold: 0.7
+  # - name: EntitySynonymMapper
+  # - name: "pipeline.keyword_search.GeneralSearch"
+  - name: ResponseSelector
+    epochs: 100
+
+policies:
+  - name: MemoizationPolicy
+  - name: RulePolicy
+    core_fallback_threshold: 0.4
+    core_fallback_action_name: "action_default_fallback"
+    enable_fallback_prediction: True
+  - name: TEDPolicy
+    max_history: 5
+    epochs: 100

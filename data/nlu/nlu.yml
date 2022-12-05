@@ -1,0 +1,47 @@
+version: '3.1'
+nlu:
+  - intent: greet
+    examples: |
+      - Hello
+      - Hi
+      - Hi bot
+      - Hey bot
+      - hi again
+      - hi folks
+      - hi there
+      - xin chào
+      - hello
+      - alo
+      - greetings
+      - hello robot
+      - hola
+      - nice to meet you.
+  - intent: TTS
+    examples: |
+      - are you a bot? to tts.
+      - am I talking to a human? to tts.
+      - nice to meet you, to tts.
+      - See you later, to tts.
+      - to tts
+      - to TTS
+      - Entities are structured pieces of information that can be extracted from a user's message, to tts.
+      - Training examples are grouped by intent and listed under the examples key. Usually, you'll list one example per line as follows, to tts.
+      - The metadata key can contain arbitrary key-value data that is tied to an example and accessible by the components in the NLU pipeline, to tts.
+  - intent: good_bye
+    examples: |
+      - Goodbye
+      - See you later
+      - Ok bye
+      - Bye.
+      - ByeBye.
+  - intent: thank
+    examples: |
+      - Thanks
+      - ok good
+      - thank you
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?

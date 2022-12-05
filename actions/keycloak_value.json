@@ -1,0 +1,8 @@
+{
+    "client_id": "rasa_client",
+    "grant_type": "password",
+    "client_secret": "8258b079-3764-4bc8-a99c-28300b37a6f6",
+    "scope": "openid",
+    "username": "rasa_user",
+    "password": "phannam"
+}

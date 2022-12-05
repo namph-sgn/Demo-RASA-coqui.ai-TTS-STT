@@ -1,0 +1,7 @@
+forms:
+  :
+    required_slots:
+      name:
+      - type: from_text
+      pizza_type:
+      - type: from_text
